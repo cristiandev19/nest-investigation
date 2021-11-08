@@ -2,12 +2,30 @@
 
 ## Features
 
-- [x] (Nestjs performance Fastify)[https://docs.nestjs.com/techniques/performance]
-- [ ] (Swagger)[]
-- [ ] (Typeorm)[]
-- [ ] (Docker compose)[]
+- [x] [Nestjs performance Fastify](https://docs.nestjs.com/techniques/performance)
+- [ ] [Swagger]()
+- [ ] [Typeorm]()
+- [ ] [Docker compose]()
 
 
+
+#### Docker
+
+There is a `docker-compose.yml` file for starting Docker.
+
+`docker-compose up`
+
+After running the sample, you can stop the Docker container with
+
+`docker-compose down`
+
+```
+docker-compose up -d postgres
+docker-compose ps
+docker-compose down
+```
+
+[docker investigation ](https://blog.logrocket.com/docker-volumes-vs-bind-mounts/)
 
 
 <p align="center">
