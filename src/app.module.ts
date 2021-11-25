@@ -4,6 +4,8 @@ import { UsersModule } from './modules/user/user.module';
 import { ConfigModule } from '@nestjs/config';
 import { User } from './modules/user/user.entity';
 import { AuthModule } from './modules/auth/auth.module';
+import { NoteModule } from './modules/note/note.module';
+import { Note } from './modules/note/note.entity';
 
 @Module({
   imports: [
@@ -17,10 +19,11 @@ import { AuthModule } from './modules/auth/auth.module';
       database: process.env.PG_DB_NAME,
       autoLoadEntities: true,
       synchronize: true,
-      entities: [User],
+      entities: [User, Note],
     }),
     UsersModule,
     AuthModule,
+    NoteModule,
   ],
 })
 export class AppModule {}
